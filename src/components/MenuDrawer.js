@@ -6,12 +6,19 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
+import Drawer from '@material-ui/core/Drawer';
+
+const drawerWidth = '100%';
 
 const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
+  drawer: {
+    flexShrink: 0,
+  },
 }));
 
 export default function MenuDrawer(props) {
+  const { container } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -44,6 +51,21 @@ export default function MenuDrawer(props) {
       >
         <MenuIcon />
       </IconButton>
+      <nav className={classes.drawer} aria-label="folders">
+        <Drawer
+          container={container}
+          variant="temporary"
+          anchor="top"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          onClick={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
     </React.Fragment>
   )
 }
