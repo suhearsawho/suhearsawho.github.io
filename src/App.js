@@ -6,6 +6,8 @@ import MyAppBar from './components/MyAppBar';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import AboutMe from './components/AboutMe';
+import PortfolioPage from './components/PortfolioPage';
+import ContactMe from './components/ContactMe';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -30,9 +32,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className="App">
           <MyAppBar />
-          <Home />
-          <Portfolio />
-          <AboutMe />
+          <Route exact path="/" render={props =>
+            <React.Fragment>
+              <Home />
+              <Portfolio />
+            </React.Fragment>
+          } />
+          <Route exact path="/about" component={AboutMe} />
+          <Route exact path="/portfolio" component={PortfolioPage} />
+          <ContactMe />
         </div>
       </ThemeProvider>
     </Router>
