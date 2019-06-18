@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import MyAppBar from './components/MyAppBar';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
+import AboutMe from './components/AboutMe';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -31,6 +32,7 @@ function App() {
           <MyAppBar />
           <Home />
           <Portfolio />
+          <AboutMe />
         </div>
       </ThemeProvider>
     </Router>

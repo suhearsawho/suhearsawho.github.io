@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -30,6 +31,8 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "none",
     color: theme.palette.primary.main,
   },
+  link: {
+  }
 }));
 
 export default function MyAppBar() {
@@ -43,11 +46,19 @@ export default function MyAppBar() {
             Susan Su
           </Typography>
           <Hidden xsDown>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Portfolio</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Resume</Button>
-            <Button color="inherit">Contact</Button>
+            <Link to="/" className={classes.link}>
+              <Button color="inherit">Home</Button>
+            </Link>
+            <Link to="/portfolio" className={classes.link}>
+              <Button color="inherit">Portfolio</Button>
+            </Link>
+            <Link to="/about" className={classes.link}>
+              <Button color="inherit">About</Button>
+            </Link>
+              <Button color="inherit">Resume</Button>
+            <Link to="/contact" className={classes.link}>
+              <Button color="inherit">Contact</Button>
+            </Link>
           </Hidden>
           <Hidden smUp>
             <MenuDrawer />

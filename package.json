@@ -2,9 +2,11 @@
   "name": "susansu.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://susansu.github.io",
   "dependencies": {
     "@material-ui/core": "^4.1.1",
     "@material-ui/icons": "^4.2.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
@@ -14,6 +16,8 @@
     "react-transition-group": "^4.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -68,8 +68,10 @@ export default function Portfolio() {
               Job Odyssey
             </Typography>
             <Typography variant="p" gutterBottom>
-              I created Job Odyssey, a web application designed to gamify your job search,
-              within a span of two weeks in a two-person team.
+              Job Odyssey is a web application, created by a two-person team within
+              the span of two weeks, that is designed to gamify the job search!
+              It enables users to track job applications, find available positions,
+              and earn tokens/rewards. 
             </Typography>
           </Paper>
         </Grid>
@@ -84,7 +86,9 @@ export default function Portfolio() {
             </Typography>
             <Typography variant="p" gutterBottom>
               Inspired by "foodie culture", Foodventures is a web application that 
-              generates travel itineraries around food! 
+              generates travel itineraries around food! It integrates the features of
+              Yelp and Google APIs to calculate the most efficient and customized
+              travel plans for users.
             </Typography>
           </Paper>
         </Grid>
@@ -95,11 +99,12 @@ export default function Portfolio() {
             }}
           >
             <Typography variant="h6" gutterBottom>
-              Air-Bnb
+              Air-Bnb Clone
             </Typography>
             <Typography variant="p" gutterBottom>
-              I created Job Odyssey, a web application designed to gamify your job search,
-              within a span of two weeks in a two-person team.
+              The Air-Bnb Clone, a project at Holberton School, is a team-based project
+              that integrates a Python backend, a MySQL database, and a HTML/CSS with
+              Javascript frontend to create a basic clone of the popular site, Air-Bnb.
             </Typography>
           </Paper>
         </Grid>
@@ -113,8 +118,9 @@ export default function Portfolio() {
               Challenge Timer
             </Typography>
             <Typography variant="p" gutterBottom>
-              I created Job Odyssey, a web application designed to gamify your job search,
-              within a span of two weeks in a two-person team.
+              The Challenge Timer is a web application that takes a twist on the
+              classical Pomodoro approach by allowing users to set an allocated time for
+              each task. Users can create accounts and save their data. 
             </Typography>
           </Paper>
         </Grid>
@@ -128,8 +134,7 @@ export default function Portfolio() {
               Shell Project
             </Typography>
             <Typography variant="p" gutterBottom>
-              I created Job Odyssey, a web application designed to gamify your job search,
-              within a span of two weeks in a two-person team.
+            
             </Typography>
           </Paper>
         </Grid>
@@ -143,8 +148,6 @@ export default function Portfolio() {
               printf Project
             </Typography>
             <Typography variant="p" gutterBottom>
-              I created Job Odyssey, a web application designed to gamify your job search,
-              within a span of two weeks in a two-person team.
             </Typography>
           </Paper>
         </Grid>
