@@ -32,7 +32,7 @@ export default function MenuDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['Home', 'About', 'Portfolio', 'Resume', 'Contact'].map((text, index) => (
+        {['Home', 'Portfolio', 'About', 'Resume', 'Contact'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemText primary={text} />
           </ListItem>

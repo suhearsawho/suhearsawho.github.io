@@ -1,23 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import MyAppBar from './components/MyAppBar';
+import Home from './components/Home';
+import Portfolio from './components/Portfolio';
 import './App.css';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: "#484848",
-      main: "#212121",
-      dark: "#000000",
-      contrastText: "#ffffff",
+      main: "#57bc90",
     },
     secondary: {
-      light: "#b4ffff",
-      main: "#80deea",
-      dark: "#4bacb8",
-      contrastText: "#000000",
+      main: "#77c9d4",
     },
+    third: "#015249",
+    fourth: "#a5a5af", 
   },
   typography: {
     fontFamily: "'Quicksand', sans-serif",
@@ -26,11 +26,15 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <MyAppBar />
-      </div>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <MyAppBar />
+          <Home />
+          <Portfolio />
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 

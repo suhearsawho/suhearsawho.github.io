@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -15,10 +16,21 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     textAlign: 'left',
+    color: 'black',
   },
   sectionMobile: {
     display: 'flex',
-  }
+  },
+  color: {
+    //backgroundImage: "linear-gradient(#ff5f6d, #ffc371)",
+    backgroundImage: "linear-gradient(#46844b, #75b477)",
+    color: theme.palette.primary.contrastText,
+  },
+  noColor: {
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    boxShadow: "none",
+    color: theme.palette.primary.main,
+  },
 }));
 
 export default function MyAppBar() {
@@ -26,15 +38,15 @@ export default function MyAppBar() {
   
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position='static' className={classes.noColor}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             Susan Su
           </Typography>
-          <Hidden xsDown> 
+          <Hidden xsDown>
             <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
             <Button color="inherit">Portfolio</Button>
+            <Button color="inherit">About</Button>
             <Button color="inherit">Resume</Button>
             <Button color="inherit">Contact</Button>
           </Hidden>
