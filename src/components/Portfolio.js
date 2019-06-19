@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
@@ -8,10 +9,10 @@ import { CSSTransition } from 'react-transition-group';
 const height = '20rem';
 const useStyles = makeStyles(theme => ({
   root: {
-    [theme.breakpoints.up('sm')]: {
-      margin: '1rem',
+    [theme.breakpoints.up('md')]: {
+      margin: '2rem',
     },
-    margin: '1rem',
+    margin: '0.5rem',
     paddingTop: '2rem',
   },
   one: {
@@ -50,15 +51,50 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
   },
+  button: {
+    color: 'white',
+    marginTop: '1rem',
+    borderColor: 'white',
+  }
 }));
+
+const useStyles1 = makeStyles(theme => ({
+  button: {
+    color: 'white',
+    marginTop: '1rem',
+    borderColor: 'white',
+  },
+  container: {
+    display: 'flex',
+  },
+}));
+
+function PortfolioButton(props) {
+  const classes = useStyles1();
+
+  return (
+    <Grid container spacing={3}>
+      <Grid item xs={6}>
+        <Button variant="outlined" fullWidth className={classes.button}>
+          Learn More
+        </Button>
+      </Grid>
+      <Grid item xs={6}>
+        <Button variant="outlined" fullWidth className={classes.button}>
+          Github Link
+        </Button>
+      </Grid>
+    </Grid>
+  )
+}
 
 export default function Portfolio() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid item xs={12} sm={6} md={4}>
+      <Grid container spacing={6}>
+        <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
               root: classes.one, 
@@ -73,9 +109,10 @@ export default function Portfolio() {
               It enables users to track job applications, find available positions,
               and earn tokens/rewards. 
             </Typography>
+            <PortfolioButton />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
               root: classes.two, 
@@ -90,9 +127,10 @@ export default function Portfolio() {
               Yelp and Google APIs to calculate the most efficient and customized
               travel plans for users.
             </Typography>
+            <PortfolioButton />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
               root: classes.three, 
@@ -106,9 +144,10 @@ export default function Portfolio() {
               that integrates a Python backend, a MySQL database, and a HTML/CSS with
               Javascript frontend to create a basic clone of the popular site, Air-Bnb.
             </Typography>
+            <PortfolioButton />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
               root: classes.four, 
@@ -122,12 +161,13 @@ export default function Portfolio() {
               classical Pomodoro approach by allowing users to set an allocated time for
               each task. Users can create accounts and save their data. 
             </Typography>
+            <PortfolioButton />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
-              root: classes.three, 
+              root: classes.two, 
             }}
           >
             <Typography variant="h6" gutterBottom>
@@ -136,9 +176,10 @@ export default function Portfolio() {
             <Typography variant="p" gutterBottom>
             
             </Typography>
+            <PortfolioButton />
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
               root: classes.one, 
@@ -149,6 +190,7 @@ export default function Portfolio() {
             </Typography>
             <Typography variant="p" gutterBottom>
             </Typography>
+            <PortfolioButton />
           </Paper>
         </Grid>
       </Grid>

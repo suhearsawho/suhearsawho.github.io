@@ -13,6 +13,14 @@ const useStyles = makeStyles(theme => ({
     },
     margin: '1rem',
     paddingTop: '2rem',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  container: {
+    [theme.breakpoints.up('sm')]: {
+      width: '60%',
+    },
+    width: '100%',
   },
   icon: {
     height: '40px',
@@ -21,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
   credits: {
     paddingTop: '1rem',
-  }
+  },
 }));
 
 export default function ContactMe() {
@@ -29,31 +37,33 @@ export default function ContactMe() {
 
   return (
     <div className={classes.root}>
-      <Typography variant="h6" gutterBottom>
-        Social Media
-      </Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <a href="https://github.com/suhearsawho" target="_blank">
-            <FaGithub className={classes.icon}/>
-          </a>
+      <div className={classes.container}>
+        <Typography variant="h6" gutterBottom>
+          Social Media
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <a href="https://github.com/suhearsawho" target="_blank">
+              <FaGithub className={classes.icon}/>
+            </a>
+          </Grid>
+          <Grid item xs={4}>
+            <a href="https://www.linkedin.com/in/susansu1/" target="_blank">
+              <FaLinkedin className={classes.icon}/>
+            </a>
+          </Grid>
+          <Grid item xs={4}>
+            <a href="https://twitter.com/sususayshello" target="_blank">
+              <FaTwitterSquare className={classes.icon}/>
+            </a>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="p" className={classes.credits}>
+              Designed and Developed by Susan Su
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={4}>
-          <a href="https://www.linkedin.com/in/susansu1/" target="_blank">
-            <FaLinkedin className={classes.icon}/>
-          </a>
-        </Grid>
-        <Grid item xs={4}>
-          <a href="https://twitter.com/sususayshello" target="_blank">
-            <FaTwitterSquare className={classes.icon}/>
-          </a>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography variant="p" className={classes.credits}>
-            Designed and Developed by Susan Su
-          </Typography>
-        </Grid>
-      </Grid>
+      </div>
     </div>
   )
 }

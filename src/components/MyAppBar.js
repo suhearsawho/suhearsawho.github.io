@@ -11,7 +11,7 @@ import MenuDrawer from './MenuDrawer';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    //flexGrow: 1,
   },
   title: {
     flexGrow: 1,
@@ -32,6 +32,8 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.primary.main,
   },
   link: {
+    textDecoration: 'none',
+    color: 'inherit',
   }
 }));
 

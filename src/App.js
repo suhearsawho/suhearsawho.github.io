@@ -2,12 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import MyAppBar from './components/MyAppBar';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import AboutMe from './components/AboutMe';
 import PortfolioPage from './components/PortfolioPage';
-import ContactMe from './components/ContactMe';
+import SocialMedia from './components/SocialMedia';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -26,21 +27,36 @@ const theme = createMuiTheme({
   },
 });
 
+const useStyles = makeStyles(theme => ({
+  body: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: '100%',
+    margin: '1rem'
+  }
+}));
+
 function App() {
+  const classes = useStyles();
+
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <div className="App">
-          <MyAppBar />
-          <Route exact path="/" render={props =>
-            <React.Fragment>
-              <Home />
-              <Portfolio />
-            </React.Fragment>
-          } />
-          <Route exact path="/about" component={AboutMe} />
-          <Route exact path="/portfolio" component={PortfolioPage} />
-          <ContactMe />
+          <div className={classes.body}>
+            <MyAppBar />
+            <Route exact path="/" render={props =>
+              <React.Fragment>
+                <Home />
+                <Portfolio />
+              </React.Fragment>
+            } />
+            <Route exact path="/about" component={AboutMe} />
+            <Route exact path="/portfolio" component={PortfolioPage} />
+            <SocialMedia />
+          </div>
         </div>
       </ThemeProvider>
     </Router>
