@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import AboutMe from './components/AboutMe';
 import PortfolioPage from './components/PortfolioPage';
+import ContactMe from './components/ContactMe';
 import SocialMedia from './components/SocialMedia';
 import './App.css';
 
@@ -55,6 +56,7 @@ function App() {
             } />
             <Route exact path="/about" component={AboutMe} />
             <Route exact path="/portfolio" component={PortfolioPage} />
+            <Route exact path="/contact" component={ContactMe} />
             <SocialMedia />
           </div>
         </div>

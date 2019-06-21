@@ -21,7 +21,6 @@ const useStyles = makeStyles(theme => ({
     height: height,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
   },
   two: {
     backgroundColor: theme.palette.third,
@@ -30,7 +29,6 @@ const useStyles = makeStyles(theme => ({
     height: height,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
   },
   three: {
     backgroundColor: theme.palette.primary.main,
@@ -39,7 +37,6 @@ const useStyles = makeStyles(theme => ({
     height: height,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
   },
   four: {
     backgroundColor: theme.palette.fourth,
@@ -48,7 +45,6 @@ const useStyles = makeStyles(theme => ({
     height: height,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
   },
 }));
 
@@ -57,8 +53,8 @@ export default function PortfolioPage() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid item xs={12} sm={6} md={4}>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
           <Paper 
             classes={{
               root: classes.one, 
@@ -73,7 +69,7 @@ export default function PortfolioPage() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12}>
           <Paper 
             classes={{
               root: classes.two, 
@@ -88,7 +84,7 @@ export default function PortfolioPage() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12}>
           <Paper 
             classes={{
               root: classes.three, 
@@ -103,7 +99,7 @@ export default function PortfolioPage() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12}>
           <Paper 
             classes={{
               root: classes.four, 
@@ -118,7 +114,7 @@ export default function PortfolioPage() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12}>
           <Paper 
             classes={{
               root: classes.three, 
@@ -133,7 +129,7 @@ export default function PortfolioPage() {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12}>
           <Paper 
             classes={{
               root: classes.one, 

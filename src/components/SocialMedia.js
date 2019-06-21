@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
-import { FaTwitterSquare} from 'react-icons/fa';
+import { FaMedium } from 'react-icons/fa';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -53,8 +53,8 @@ export default function ContactMe() {
             </a>
           </Grid>
           <Grid item xs={4}>
-            <a href="https://twitter.com/sususayshello" target="_blank">
-              <FaTwitterSquare className={classes.icon}/>
+            <a href="https://medium.com/@susansu.meche" target="_blank">
+              <FaMedium className={classes.icon}/>
             </a>
           </Grid>
           <Grid item xs={12}>

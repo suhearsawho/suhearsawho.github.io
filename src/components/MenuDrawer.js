@@ -23,6 +23,7 @@ export default function MenuDrawer(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const links = ['/', '/portfolio', '/about', '/resume', '/contact'];
 
   function handleDrawerToggle() {
     setMobileOpen(!mobileOpen);
@@ -34,9 +35,11 @@ export default function MenuDrawer(props) {
       <Divider />
       <List>
         {['Home', 'Portfolio', 'About', 'Resume', 'Contact'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
+          <Link to={ links[index] }>
+            <ListItem button key={text}>
+              <ListItemText primary={text} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>

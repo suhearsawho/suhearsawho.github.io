@@ -71,6 +71,7 @@ const useStyles1 = makeStyles(theme => ({
 
 function PortfolioButton(props) {
   const classes = useStyles1();
+  const { link } = props;
 
   return (
     <Grid container spacing={3}>
@@ -80,9 +81,11 @@ function PortfolioButton(props) {
         </Button>
       </Grid>
       <Grid item xs={6}>
-        <Button variant="outlined" fullWidth className={classes.button}>
-          Github Link
-        </Button>
+        <a href={link} target="_blank">
+          <Button variant="outlined" fullWidth className={classes.button}>
+            Github Link
+          </Button>
+        </a>
       </Grid>
     </Grid>
   )
@@ -109,7 +112,7 @@ export default function Portfolio() {
               It enables users to track job applications, find available positions,
               and earn tokens/rewards. 
             </Typography>
-            <PortfolioButton />
+            <PortfolioButton link="https://github.com/suhearsawho/jobodyssey" />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
