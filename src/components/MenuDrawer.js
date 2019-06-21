@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
   drawer: {
     flexShrink: 0,
   },
+  link: {
+    color: theme.palette.primary.main,
+  },
 }));
 
 export default function MenuDrawer(props) {
@@ -35,7 +38,7 @@ export default function MenuDrawer(props) {
       <Divider />
       <List>
         {['Home', 'Portfolio', 'About', 'Resume', 'Contact'].map((text, index) => (
-          <Link to={ links[index] }>
+          <Link to={ links[index] } className={classes.link}>
             <ListItem button key={text}>
               <ListItemText primary={text} />
             </ListItem>
