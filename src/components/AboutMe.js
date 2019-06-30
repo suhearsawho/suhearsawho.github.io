@@ -2,20 +2,32 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import myImage from './images/myImage.png';
+import aboutme from './images/aboutme.jpg';
+import Timeline from './Timeline';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    [theme.breakpoints.up('sm')]: {
+      margin: '1rem',
+    },
+    margin: '1rem',
+    paddingTop: '2rem',
     textAlign: 'left',
-    margin: '2rem',
   },
   image: {
     maxWidth: '100%',
-    height: '20rem',
+    maxHeight: '20rem',
+    objectFit: 'contain',
+    borderRadius: '2rem',
   },
-  imageContainer: {
+  info: {
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+  timeline: {
+    backgroundColor: '#f1ebeb',
+    borderRadius: '1rem',
   }
 }));
 
@@ -24,30 +36,15 @@ export default function AboutMe() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid xs={12} sm={6} className={classes.imageContainer}>
-          <img src={myImage} className={classes.image} />
+      <Grid container spacing={1}>
+        <Grid xs={12} md={4} className={classes.info}>
+          <img src={aboutme} className={classes.image} />
+          <p>
+            Hi, I'm Susan Su. I am a Full-Stack software engineer in San Francisco that is passionate about building web applications. 
+          </p>
         </Grid>
-        <Grid xs={12} sm={6}>
-          <Typography variant="h5" gutterBottom>
-            Hi, I'm Susan Su.
-          </Typography>
-          <Typography variant="h6" gutterBottom>
-            I am a fullstack software engineer in San Francisco.
-          </Typography>
-          <Typography variant="p" gutterBottom>
-            Prior to becoming a software engineer, I graduated from UCLA with a B.S. in
-            Mechanical Engineering. After graduation, I was employed at Lockheed Martin
-            as a Systems Integration & Test Engineer. Deciding that my interests were
-            in software engineering, I decided to resign from my position and pursue
-            a software education at Holberton School. Within a year, I created several
-            school and independent projects, as listed on my portfolio page. 
-          </Typography>
-          <br />
-          <Typography variant="p" gutterBottom>
-            If you have any questions or comments, please feel free to email me at
-            susansu.software@gmail.com!
-          </Typography>
+        <Grid xs={12} md={8} className={classes.timeline}>
+          <Timeline />
         </Grid>
       </Grid>
     </div>

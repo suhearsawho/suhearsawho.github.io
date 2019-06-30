@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
+import Fade from '@material-ui/core/Fade';
+import Zoom from '@material-ui/core/Zoom';
 import MyAppBar from './components/MyAppBar';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';
@@ -35,9 +37,20 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100%',
-    margin: '1rem'
+    width: '98%',
+    marginTop: '1rem',
+    marginBottom: '1rem',
   }
 }));
+
+function HomePage(props) {
+  return (
+    <div {...props}>
+      <Home />
+      <Portfolio />
+    </div>
+  );
+}
 
 function App() {
   const classes = useStyles();
@@ -50,8 +63,11 @@ function App() {
             <MyAppBar />
             <Route exact path="/" render={props =>
               <React.Fragment>
-                <Home />
-                <Portfolio />
+                <Fade in={true}
+                 style={{ transitionDelay: '200ms' }}
+                >
+                  <HomePage />
+                </Fade>
               </React.Fragment>
             } />
             <Route exact path="/about" component={AboutMe} />

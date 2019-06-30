@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { CSSTransition } from 'react-transition-group';
+import Fade from '@material-ui/core/Fade';
 
 const height = '20rem';
 const useStyles = makeStyles(theme => ({
@@ -49,10 +50,18 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function PortfolioPage() {
+  return (
+    <Fade in={true}>
+      <MyComponent />
+    </Fade>
+  );
+}
+
+function MyComponent(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} {...props}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper 

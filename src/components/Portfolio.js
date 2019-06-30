@@ -104,6 +104,24 @@ export default function Portfolio() {
             }}
           >
             <Typography variant="h6" gutterBottom>
+              Job Odyssey with Holberton School
+            </Typography>
+            <Typography variant="p" gutterBottom>
+              Job Odyssey is a web application, created by a two-person team within
+              the span of two weeks, that is designed to gamify the job search!
+              It enables users to track job applications, find available positions,
+              and earn tokens/rewards. 
+            </Typography>
+            <PortfolioButton link="https://github.com/suhearsawho/jobodyssey" />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Paper 
+            classes={{
+              root: classes.one, 
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
               Job Odyssey
             </Typography>
             <Typography variant="p" gutterBottom>
@@ -192,6 +210,21 @@ export default function Portfolio() {
               printf Project
             </Typography>
             <Typography variant="p" gutterBottom>
+            </Typography>
+            <PortfolioButton />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Paper 
+            classes={{
+              root: classes.two, 
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
+              Monty Project
+            </Typography>
+            <Typography variant="p" gutterBottom>
+            
             </Typography>
             <PortfolioButton />
           </Paper>
