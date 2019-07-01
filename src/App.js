@@ -11,6 +11,7 @@ import AboutMe from './components/AboutMe';
 import PortfolioPage from './components/PortfolioPage';
 import ContactMe from './components/ContactMe';
 import SocialMedia from './components/SocialMedia';
+import Resume from './components/Resume';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -72,6 +73,7 @@ function App() {
             <Route exact path="/about" component={AboutMe} />
             <Route exact path="/portfolio" component={PortfolioPage} />
             <Route exact path="/contact" component={ContactMe} />
+            <Route exact path="/resume" component={Resume} />
             <SocialMedia />
           </div>
         </div>
