@@ -4,7 +4,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
-import Zoom from '@material-ui/core/Zoom';
 import MyAppBar from './components/MyAppBar';
 import Home from './components/Home';
 import Portfolio from './components/Portfolio';

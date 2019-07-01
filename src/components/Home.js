@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center',
+    },
     textAlign: 'left',
   },
   image: {

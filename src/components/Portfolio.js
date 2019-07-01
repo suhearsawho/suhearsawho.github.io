@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     marginTop: '1rem',
     borderColor: 'white',
-  }
+  },
 }));
 
 const useStyles1 = makeStyles(theme => ({
@@ -71,14 +71,16 @@ const useStyles1 = makeStyles(theme => ({
 
 function PortfolioButton(props) {
   const classes = useStyles1();
-  const { link } = props;
+  const { link, learnMore } = props;
 
   return (
     <Grid container spacing={3}>
       <Grid item xs={6}>
+        <a href={learnMore}>
         <Button variant="outlined" fullWidth className={classes.button}>
           Learn More
         </Button>
+        </a>
       </Grid>
       <Grid item xs={6}>
         <a href={link} target="_blank">
@@ -100,25 +102,27 @@ export default function Portfolio() {
         <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
-              root: classes.one, 
+              root: classes.one
             }}
           >
             <Typography variant="h6" gutterBottom>
               Job Odyssey with Holberton School
             </Typography>
             <Typography variant="p" gutterBottom>
-              Job Odyssey is a web application, created by a two-person team within
-              the span of two weeks, that is designed to gamify the job search!
-              It enables users to track job applications, find available positions,
-              and earn tokens/rewards. 
+              After presenting Job Odyssey at Holberton School's EOY presentations,
+              my partner and I were asked to upgrade our web application to become
+              an internal tool for the school.
             </Typography>
-            <PortfolioButton link="https://github.com/suhearsawho/jobodyssey" />
+            <PortfolioButton
+              learnMore="/portfolio#jobHolberton"
+              link="https://github.com/suhearsawho/jobodyssey"
+            />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
-              root: classes.one, 
+              root: classes.two, 
             }}
           >
             <Typography variant="h6" gutterBottom>
@@ -127,16 +131,19 @@ export default function Portfolio() {
             <Typography variant="p" gutterBottom>
               Job Odyssey is a web application, created by a two-person team within
               the span of two weeks, that is designed to gamify the job search!
-              It enables users to track job applications, find available positions,
-              and earn tokens/rewards. 
+              It enables users to track and consolidate job applications, 
+              find available positions, and earn tokens/rewards. 
             </Typography>
-            <PortfolioButton link="https://github.com/suhearsawho/jobodyssey" />
+            <PortfolioButton
+              learnMore="/portfolio#job"
+              link="https://github.com/suhearsawho/jobodyssey"
+            />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
-              root: classes.two, 
+              root: classes.three, 
             }}
           >
             <Typography variant="h6" gutterBottom>
@@ -148,13 +155,16 @@ export default function Portfolio() {
               Yelp and Google APIs to calculate the most efficient and customized
               travel plans for users.
             </Typography>
-            <PortfolioButton />
+            <PortfolioButton
+              learnMore="/portfolio#foodventures"
+              link="https://github.com/suhearsawho/foodventures"
+            />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Paper 
             classes={{
-              root: classes.three, 
+              root: classes.four, 
             }}
           >
             <Typography variant="h6" gutterBottom>
@@ -165,24 +175,10 @@ export default function Portfolio() {
               that integrates a Python backend, a MySQL database, and a HTML/CSS with
               Javascript frontend to create a basic clone of the popular site, Air-Bnb.
             </Typography>
-            <PortfolioButton />
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper 
-            classes={{
-              root: classes.four, 
-            }}
-          >
-            <Typography variant="h6" gutterBottom>
-              Challenge Timer
-            </Typography>
-            <Typography variant="p" gutterBottom>
-              The Challenge Timer is a web application that takes a twist on the
-              classical Pomodoro approach by allowing users to set an allocated time for
-              each task. Users can create accounts and save their data. 
-            </Typography>
-            <PortfolioButton />
+            <PortfolioButton
+              learnMore="/portfolio#airbnb"
+              link="https://github.com/suhearsawho/AirBnB_clone_v4"
+            />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -192,12 +188,35 @@ export default function Portfolio() {
             }}
           >
             <Typography variant="h6" gutterBottom>
+              Challenge Timer
+            </Typography>
+            <Typography variant="p" gutterBottom>
+              The Challenge Timer is a web application that takes a twist on the
+              classical Pomodoro approach by allowing users to set timed challenges for
+              each task. Users can create accounts and save their data. 
+            </Typography>
+            <PortfolioButton
+              learnMore="/portfolio#timer"
+              link="https://github.com/suhearsawho/challenge_timer_web_app"
+            />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Paper 
+            classes={{
+              root: classes.three, 
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
               Shell Project
             </Typography>
             <Typography variant="p" gutterBottom>
             
             </Typography>
-            <PortfolioButton />
+            <PortfolioButton
+              learnMore="/portfolio#shell"
+              link="https://github.com/suhearsawho/simple_shell"
+            />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -211,7 +230,10 @@ export default function Portfolio() {
             </Typography>
             <Typography variant="p" gutterBottom>
             </Typography>
-            <PortfolioButton />
+            <PortfolioButton
+              learnMore="/portfolio#printf"
+              link="https://github.com/suhearsawho/printf"
+            />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -226,7 +248,46 @@ export default function Portfolio() {
             <Typography variant="p" gutterBottom>
             
             </Typography>
-            <PortfolioButton />
+            <PortfolioButton
+              learnMore="/portfolio#monty"
+              link="https://github.com/seleniadelgado/monty"
+            />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Paper 
+            classes={{
+              root: classes.four, 
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
+              Kivy Hackathon at Holberton
+            </Typography>
+            <Typography variant="p" gutterBottom>
+            
+            </Typography>
+            <PortfolioButton
+              learnMore="/portfolio#hackathon"
+              link="https://github.com/BennettDixon/hackday_kivy_app"
+            />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Paper 
+            classes={{
+              root: classes.three, 
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
+              Github Hackathon at Holberton
+            </Typography>
+            <Typography variant="p" gutterBottom>
+            
+            </Typography>
+            <PortfolioButton
+              learnMore="/portfolio#hackathon"
+              link="https://github.com/stak21/TripleTail"
+            />
           </Paper>
         </Grid>
       </Grid>

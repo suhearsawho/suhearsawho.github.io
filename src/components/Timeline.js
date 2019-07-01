@@ -1,8 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaBriefcase } from 'react-icons/fa';
+import { FaUsers } from 'react-icons/fa';
+import { FaLaptopCode } from 'react-icons/fa';
+import { FaSatellite } from 'react-icons/fa';
+import { FaWater } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
 
 const useStyles = makeStyles(theme => ({
 
@@ -10,15 +15,16 @@ const useStyles = makeStyles(theme => ({
 
 export default function Timeline() {
   const classes = useStyles();
+  const theme = useTheme();
 
   return (
     <div>
-    	<VerticalTimeline>
+    	<VerticalTimeline layout="one-column">
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				date="June 2019 to Present"
-				iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-				icon={<FaBriefcase />}
+				iconStyle={{ background: theme.palette.primary.main, color: '#fff' }}
+				icon={<FaUsers />}
 			>
 				<h3 className="vertical-timeline-element-title">Fullstack Software Engineer @ Job Odyssey with Holberton School</h3>
 				<h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
@@ -29,8 +35,8 @@ export default function Timeline() {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				date="September 2018 to June 2019"
-				iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-				icon={<FaBriefcase />}
+				iconStyle={{ background: theme.palette.third, color: '#fff' }}
+				icon={<FaLaptopCode />}
 			>
 				<h3 className="vertical-timeline-element-title">Software Engineer Student @ Holberton School</h3>
 				<h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
@@ -41,8 +47,8 @@ export default function Timeline() {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				date="July 2017 to May 2018"
-				iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-				icon={<FaBriefcase />}
+				iconStyle={{ background: theme.palette.fourth, color: '#fff' }}
+				icon={<FaSatellite />}
 			>
 				<h3 className="vertical-timeline-element-title">System Integration and Test Engineer @ Lockheed Martin</h3>
 				<h4 className="vertical-timeline-element-subtitle">Sunnyvale, CA</h4>
@@ -53,8 +59,8 @@ export default function Timeline() {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
 				date="June 2016 to December 2016"
-				iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-				icon={<FaBriefcase />}
+				iconStyle={{ background: theme.palette.secondary.main, color: '#fff' }}
+				icon={<FaWater />}
 			>
 				<h3 className="vertical-timeline-element-title">Mechanical Engineer Intern @ Los Angeles Department of Water & Power (LADWP) </h3>
 				<h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
@@ -65,8 +71,8 @@ export default function Timeline() {
 			<VerticalTimelineElement
 				className="vertical-timeline-element--education"
 				date="September 2013 to June 2017"
-				iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-				icon={<FaBriefcase />}
+				iconStyle={{ background: theme.palette.primary.main, color: '#fff' }}
+				icon={<FaGraduationCap />}
 			>
 				<h3 className="vertical-timeline-element-title">B.S. Mechanical Engineer @ UCLA</h3>
 				<h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>

@@ -43,22 +43,22 @@ export default function ContactMe() {
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={4}>
-            <a href="https://github.com/suhearsawho" target="_blank">
+            <a href="https://github.com/suhearsawho" target="_blank" rel="noopener noreferrer">
               <FaGithub className={classes.icon}/>
             </a>
           </Grid>
           <Grid item xs={4}>
-            <a href="https://www.linkedin.com/in/susansu1/" target="_blank">
+            <a href="https://www.linkedin.com/in/susansu1/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className={classes.icon}/>
             </a>
           </Grid>
           <Grid item xs={4}>
-            <a href="https://medium.com/@susansu.meche" target="_blank">
+            <a href="https://medium.com/@susansu.meche" target="_blank" rel="noopener noreferrer">
               <FaMedium className={classes.icon}/>
             </a>
           </Grid>
           <Grid item xs={12}>
-            <Typography variant="p" className={classes.credits}>
+            <Typography variant="body1" className={classes.credits}>
               Designed and Developed by Susan Su
             </Typography>
           </Grid>

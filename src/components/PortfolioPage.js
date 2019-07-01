@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { CSSTransition } from 'react-transition-group';
 import Fade from '@material-ui/core/Fade';
 
 const height = '20rem';
@@ -63,7 +62,7 @@ function MyComponent(props) {
   return (
     <div className={classes.root} {...props}>
       <Grid container spacing={3}>
-        <Grid item xs={12}>
+        <Grid item xs={12} id="jobHolberton">
           <Paper 
             classes={{
               root: classes.one, 
@@ -78,7 +77,22 @@ function MyComponent(props) {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} id="job">
+          <Paper 
+            classes={{
+              root: classes.one, 
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
+              Job Odyssey
+            </Typography>
+            <Typography variant="p" gutterBottom>
+              I created Job Odyssey, a web application designed to gamify your job search,
+              within a span of two weeks in a two-person team.
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} id="foodventures">
           <Paper 
             classes={{
               root: classes.two, 
@@ -93,7 +107,7 @@ function MyComponent(props) {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} id="airbnb">
           <Paper 
             classes={{
               root: classes.three, 
@@ -108,7 +122,7 @@ function MyComponent(props) {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} id="timer">
           <Paper 
             classes={{
               root: classes.four, 
@@ -123,7 +137,7 @@ function MyComponent(props) {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} id="shell">
           <Paper 
             classes={{
               root: classes.three, 
@@ -138,7 +152,22 @@ function MyComponent(props) {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} id="printf">
+          <Paper 
+            classes={{
+              root: classes.one, 
+            }}
+          >
+            <Typography variant="h6" gutterBottom>
+              printf Project
+            </Typography>
+            <Typography variant="p" gutterBottom>
+              I created Job Odyssey, a web application designed to gamify your job search,
+              within a span of two weeks in a two-person team.
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} id="hackathon">
           <Paper 
             classes={{
               root: classes.one, 

@@ -2,14 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
-
-const drawerWidth = '100%';
 
 const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
@@ -24,7 +22,6 @@ const useStyles = makeStyles(theme => ({
 export default function MenuDrawer(props) {
   const { container } = props;
   const classes = useStyles();
-  const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const links = ['/', '/portfolio', '/about', '/resume', '/contact'];
 
@@ -38,7 +35,7 @@ export default function MenuDrawer(props) {
       <Divider />
       <List>
         {['Home', 'Portfolio', 'About', 'Resume', 'Contact'].map((text, index) => (
-          <Link to={ links[index] } className={classes.link}>
+          <Link to={ links[index] } className={classes.link} key={text}>
             <ListItem button key={text}>
               <ListItemText primary={text} />
             </ListItem>
