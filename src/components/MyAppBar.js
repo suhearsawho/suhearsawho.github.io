@@ -39,7 +39,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function MyAppBar() {
   const classes = useStyles();
-  
   return (
     <div className={classes.root}>
       <AppBar position='static' className={classes.noColor}>
@@ -57,7 +56,9 @@ export default function MyAppBar() {
             <Link to="/about" className={classes.link}>
               <Button color="inherit">About</Button>
             </Link>
+						<Link to="/resume" className={classes.link}>
               <Button color="inherit">Resume</Button>
+						</Link>
             <Link to="/contact" className={classes.link}>
               <Button color="inherit">Contact</Button>
             </Link>

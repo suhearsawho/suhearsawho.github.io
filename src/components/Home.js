@@ -57,16 +57,15 @@ export default function Home() {
         </Grid>
         <Grid item xs={12} sm={8}>
           <Typography variant="h4" gutterBottom>
-            Hi, I'm Susan. 
+            Hi, I'm Susan.
           </Typography>
           <Typography variant="h6" gutterBottom>
-            I am a Fullstack Software Engineer based in Bay Area
-            that is seeking a full time position. 
-          </Typography>
+						I am a Mechanical Engineer turned
+						Fullstack Software Engineer based in San Francisco Bay Area.
+					</Typography>
           <Typography variant="p" gutterBottom>
-            This website contains a portfolio of my current and previous projects.
-            Enjoy!
-          </Typography>
+						Welcome to my portfolio!
+					</Typography>
         </Grid>
       </Grid>
     </div>

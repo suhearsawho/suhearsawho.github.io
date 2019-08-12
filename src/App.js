@@ -23,7 +23,7 @@ const theme = createMuiTheme({
       main: "#77c9d4",
     },
     third: "#015249",
-    fourth: "#a5a5af", 
+    fourth: "#55bee0", 
   },
   typography: {
     fontFamily: "'Quicksand', sans-serif",

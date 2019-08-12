@@ -22,8 +22,21 @@ export default function Timeline() {
     	<VerticalTimeline layout="one-column">
 			<VerticalTimelineElement
 				className="vertical-timeline-element--work"
-				date="June 2019 to Present"
+				date="July 2019 to Present"
 				iconStyle={{ background: theme.palette.primary.main, color: '#fff' }}
+				icon={<FaUsers />}
+			>
+				<h3 className="vertical-timeline-element-title">Software Engineer at Dor Technologies</h3>
+				<h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+				<p>
+          Dor Technologies is a startup in San Francisco that creates thermal sensor devices to
+          monitor foot traffic.
+        </p>
+			</VerticalTimelineElement>
+			<VerticalTimelineElement
+				className="vertical-timeline-element--work"
+				date="June 2019 to July 2019"
+				iconStyle={{ background: theme.palette.secondary.main, color: '#fff' }}
 				icon={<FaUsers />}
 			>
 				<h3 className="vertical-timeline-element-title">Fullstack Software Engineer @ Job Odyssey with Holberton School</h3>

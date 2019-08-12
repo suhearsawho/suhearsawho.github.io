@@ -65,10 +65,37 @@ export default function AboutMe() {
           <Paper className={classes.info}>
           <img src={aboutme} className={classes.image} />
           <p className={classes.intro}>
-            I am Susan Su, a mechanical engineer turned full-stack software engineer
-            located in San Francisco. Currently, I am looking for a full-time position at a
-            company with a fast-paced environment and challenging tasks. I am a fast learner
-            and motivated worker who will make sure to get the job done well and efficiently.
+            Hi there! I am Susan Su, a mechancial engineer turned software engineer located 
+            in San Francisco Bay Area. 
+            <br/>
+            <br/>
+            I graduated from UCLA with a B.S. Mechanical Engineering
+            and began working at Lockheed Martin shortly after college. Because of my work ethic
+            and dependability, I was chosen to lead testing on a classified spacecraft
+            system. 
+            <br/>
+            <br/>
+            After I departed this job, I joined Holberton School of Software Engineering.
+            In my last weeks of the program, I created a web application at jobodyssey.com with
+            the aim of gamifying and optimizing the job search. Holberton School quickly asked
+            to incorporate this application into their school as an internal tool for current
+            and future students to use.
+            <br/>
+            <br/>
+            Two weeks after I completed my first year curriculum at Holberton School,
+            I joined Dor Technologies, a startup in San Francisco, as a software engineer
+            in a three-month contract. In a short span of time with the company,
+            I have picked up several new technologies, including AWS and Docker, and 
+            contributed to the codebase. One of my recent tasks included creating new
+            Python classes and functions that would support algoritm testing through the
+            creation and management of MySQL Docker containers.
+            <br/>
+            <br/>
+            One of my biggest drives is aiming to make a positive impact at the companies that 
+            I work for. I strive to produce excellent work to support the company I represent
+            to the best of my abilities. As a team player, I understand the importance
+            of clear communication and support. Overall, I hope that I can be a great
+            fit for your company!
           </p>
           </Paper>
         </Grid>
